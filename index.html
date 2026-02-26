@@ -11,37 +11,43 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      .font {
-        font-family: "Inter", sans-serif;
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
       }
-    </style>
+    }
+  }
+</script>
   </head>
-  <body>
+  <body class="font-sans">
     <header>
       <nav class="bg-[#53389E] p-4">
         <div
           class="max-w-[1280px] px-8 mx-auto flex justify-between items-center"
         >
-          <div class="flex gap-10 items-center">
+          <div class="flex gap-[2.5rem] items-center">
             <div class="flex items-center">
               <img src="./image/logo-pti.png" alt="" class="w-[2.375rem]" />
-              <h2 class="text-lg font-bold leading-[0.875rem] text-[#FFFFFF]">
+              <h2 class="text-[1.125rem] font-bold leading-[0.875rem] text-[#FFFFFF]">
                 PTI
               </h2>
             </div>
             <div
-              class="flex gap-8 text-[#FFFFFF] text-base font-semibold leading-2xl"
+              class="flex gap-8 text-[#FFFFFF] text-[1rem] font-semibold leading-6"
             >
-              <a href="" class="menu-items">Home</a>
-              <a href="" class="menu-items">Contact</a>
-              <a href="" class="menu-items">Resources</a>
-              <a href="" class="menu-items">Pricing</a>
+              <a href="">Home</a>
+              <a href="">Contact</a>
+              <a href="">Resources</a>
+              <a href="">Pricing</a>
             </div>
           </div>
           <div class="flex gap-3 text-base font-semibold leading-6">
-            <a href="" class="bg-[#FFFFFF] text-[#7F56D9] px-4 py-2 rounded-lg">Log in</a>
-            <a href="" class="bg-[#7F56D9] text-[#FFFFFF] px-4 py-2 rounded-lg">Sign up</a>
+            <a href="" class="bg-[#FFFFFF] text-[#7F56D9] px-4 py-[0.625rem] rounded-lg">Log in</a>
+            <a href="" class="bg-[#7F56D9] text-[#FFFFFF] px-4 py-[0.625rem] rounded-lg">Sign up</a>
           </div>
         </div>
       </nav>
