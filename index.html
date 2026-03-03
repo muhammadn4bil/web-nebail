@@ -11,34 +11,39 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Inter', 'sans-serif'],
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#53389E",
+              secondary: "#7F56D9",
+              rawrring: "#667085",
+              bg: "#475467",
+              bor: "#D0D5DD",
+            },
+          },
         },
-      }
-    }
-  }
-</script>
+      };
+    </script>
   </head>
   <body class="font-sans">
     <header>
-      <nav class="bg-[#53389E] p-4">
-        <div
-          class="max-w-[1280px] px-8 mx-auto flex justify-between items-center"
-        >
+      <nav class="py-4 px-10">
+        <div class="max-w-7xl px-8 mx-auto flex justify-between items-center">
           <div class="flex gap-[2.5rem] items-center">
             <div class="flex items-center">
               <img src="./image/logo-pti.png" alt="" class="w-[2.375rem]" />
-              <h2 class="text-[1.125rem] font-bold leading-[0.875rem] text-[#FFFFFF]">
+              <h2
+                class="text-[1.125rem] font-bold leading-[0.875rem] text-secondary"
+              >
                 PTI
               </h2>
             </div>
-            <div
-              class="flex gap-8 text-[#FFFFFF] text-[1rem] font-semibold leading-6"
-            >
+            <div class="flex gap-8 text-bg text-[1rem] font-semibold leading-6">
               <a href="">Home</a>
               <a href="">Contact</a>
               <a href="">Resources</a>
@@ -46,11 +51,74 @@
             </div>
           </div>
           <div class="flex gap-3 text-base font-semibold leading-6">
-            <a href="" class="bg-[#FFFFFF] text-[#7F56D9] px-4 py-[0.625rem] rounded-lg">Log in</a>
-            <a href="" class="bg-[#7F56D9] text-[#FFFFFF] px-4 py-[0.625rem] rounded-lg">Sign up</a>
+            <a
+              href=""
+              class="bg-[#FFFFFF] text-bg px-4 py-[0.625rem] rounded-lg"
+              >Log in</a
+            >
+            <a
+              href=""
+              class="bg-[#7F56D9] text-[#FFFFFF] px-4 py-[0.625rem] rounded-lg"
+              >Sign up</a
+            >
           </div>
         </div>
       </nav>
     </header>
+    <main>
+      <section class="py-24 px-10">
+        <div class="max-w-7xl mx-auto text-center">
+          <p class="text-base font-semibold leading-6 text-secondary">
+            Contact us
+          </p>
+          <h2 class="text-5xl font-semibold leading-[3.75rem] mt-3">
+            Get in touch
+          </h2>
+          <p class="text-xl font-normal leading-[1.875rem] text-bg mt-6">
+            We’d love to hear from you. Please fill out this form.
+          </p>
+        </div>
+      </section>
+      <section class="px-10 pb-24">
+        <div class="max-w-7xl mx-auto">
+          <form action="" class="flex flex-col items-center">
+            <div class="flex flex-col gap-6 mb-8">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-2">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" class="border border-bor py-[0.625rem] px-[0.875rem] rounded-lg w-[14rem]" placeholder="First Name" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" class="border border-bor py-[0.625rem] px-[0.875rem] rounded-lg w-[14rem]" placeholder="Last Name" />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="border border-bor py-[0.625rem] px-[0.875rem] rounded-lg" placeholder="you@company.com" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="border border-bor py-[0.625rem] px-[0.875rem] rounded-lg" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" class="border border-bor py-3 px-[0.875rem] rounded-lg h-[8.375rem]" placeholder="Leave us a message..."></textarea>
+              </div> 
+              <div class="flex gap-3">
+                <input type="checkbox"  id="privacy" />
+                <label for="privacy" class="text-bg"
+                  >You agree to our friendly
+                  <a href="" class="underline">privacy policy.</a></label
+                >
+              </div>
+            </div>
+            <div class="border border-bor rounded-lg w-full max-w-[30rem] py-3 px-[1.125rem] bg-secondary">
+              <button type="submit" class="w-full text-center text-white">Send message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
